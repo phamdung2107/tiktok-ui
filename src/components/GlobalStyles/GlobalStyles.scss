@@ -4,6 +4,7 @@
 :root {
     --primary: #fe2c55;
     --black: #000;
+    --while: #fff;
     --text-color: #333;
 
     //Default Layout
@@ -37,4 +38,5 @@ input,
 
 a[href] {
     color: var(--text-color);
+    text-decoration: none;
 }
