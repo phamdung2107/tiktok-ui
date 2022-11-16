@@ -11,10 +11,13 @@ import {
     LiveActiveIcon,
 } from '~/components/Icons';
 import config from '~/config';
+import Button from '~/components/Button';
 
 const cx = classNames.bind(styles);
 
 function Sidebar() {
+    const currentUser = true;
+
     return (
         <aside className={cx('wrapper')}>
             <Menu>
@@ -28,8 +31,19 @@ function Sidebar() {
                 <MenuItem title="LIVE" to={config.routes.live} icon={<LiveIcon />} activeIcon={<LiveActiveIcon />} />
             </Menu>
 
-            <SuggestedAccounts label="Suggested accounts" />
-            <SuggestedAccounts label="Following accounts" />
+            {currentUser ? (
+                <>
+                    <SuggestedAccounts label="Suggested accounts" />
+                </>
+            ) : (
+                <div className={cx('req-wrapper')}>
+                    <p>Đăng nhập để follow các tác giả, thích video và xem bình luận.</p>
+                    <Button outline large>
+                        Log in
+                    </Button>
+                </div>
+            )}
+            <SuggestedAccounts label="Tài khoản được đề xuất" />
         </aside>
     );
 }

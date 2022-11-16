@@ -16,3 +16,19 @@
     z-index: 9;
     padding-right: 8px;
 }
+
+.req-wrapper {
+    border-top: 1px solid #e3e3e4;
+    padding: 20px 0 24px;
+
+    p {
+        color: rgba(22, 24, 35, 0.5);
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 20px;
+    }
+}

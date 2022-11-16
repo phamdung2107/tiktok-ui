@@ -17,7 +17,7 @@ function SuggestedAccounts({ label }) {
             <AccountItem />
             <AccountItem />
 
-            <p className={cx('more-btn')}>See all</p>
+            <p className={cx('more-btn')}>Xem tất cả</p>
         </div>
     );
 }
